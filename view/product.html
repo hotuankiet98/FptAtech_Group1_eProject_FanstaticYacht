@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Yachts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="../home/css/style.css">
+    <link rel="stylesheet" href="../product_detail/css/style.css">
+    <link rel="stylesheet" href="../home/css/responsive.css">
+    <link rel="stylesheet" href="../product_detail/css/responsive.css">
+    <link rel="stylesheet" href="../product/css/style.css">
+    <link rel="stylesheet" href="../product_detail/css/header.css">
+    <link rel="stylesheet" href="../product/css/rsp.css">
+
+    <style>
+        dir-pagination-controls{
+            display:flex;
+            justify-content:center;
+            
+        }
+        .ng-binding{
+            font-size: 15;
+        }
+        dir-pagination-controls>ul{
+            align-items: center;
+            
+        }
+        dir-pagination-controls>ul>li{
+            padding: 10px;
+            
+        }
+        dir-pagination-controls>ul>li>a{
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+    <div style="position:sticky;top:0;z-index: 1;" class="nav-header">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light padding-20">
+            <div class="container-fluid">
+                <a style="width:100px;height:auto" class="navbar-brand" href="../index.html"><img style="width: 100%;" src="../home/img/logopts2.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar" style="justify-content:space-between">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item js-login">Login</button></li>
+                                <li><button class="dropdown-item js-register">Register</button></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item_favorite">
+                            <a class="nav-link" href="#"><i class="fa-regular fa-heart" style="margin-right: 5px;"></i>Favorites<span style="margin-left: 5px;padding:0 6px;background-color: black;color:white;border-radius: 20px;"><span ng-hide="hideFavoriteNum" ng-model="hideFavoriteNum">0</span>{{countFavorite}}</span></a>
+                            <div  class="favorite-table-item">
+                                <div>
+                                    <table style="position: absolute;width: 100%;background-color: white;">
+                                        <tr ng-repeat="s in list|filter:{favorite:true}">
+                                            <td><img style="width: 100%"ng-src="../product/image/{{s.image}}" alt=""></td>
+                                            <td style="font-size:0.7rem;font-weight: bold">{{s.name}}</td>
+                                        </tr>
+                                        <tr>
+                                            <h6 style="position:absolute;top:35%;text-align:center;padding-left: 8px;" ng-hide="hideFavoriteTable" ng-model="hideFavoriteTable">My favorites are still empty</h6>
+                                        </tr>
+                                    </table>  
+                                </div>
+                            </div>
+                        </li>   
+                    </ul>
+                </div>
+            </div>
+        </nav> 
+    </div>
+    <div class="background-main">
+        <div class="container-fluid">
+            <h1 class="text-center">FIND<span class="text-center__second">YACHTS</span></h1>
+            <div class="grid">
+                <div style="margin:0" class="row">
+                    <div style="margin-bottom: 20px;" class="col-lg-3 col-sm-12">
+                        <form name="myForm" ng-submit="">
+                            <div id="accordition" class="panel-heading__main">
+                                <div class="panel-heading">
+                                    <h3 style="display:flex;justify-content:space-between" class="panel-title">
+                                        <div class="panel-title__main">FIND YACHTS</div>
+                                        
+                                    </h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <label for=""><strong>Type of vessel</strong></label>
+                                            <div class="select-input">
+                                                <select name="" id="" ng-model="findType">
+                                                    <option value="" style="font-weight:bold">Any</option>
+                                                    <option value="motor yachts">Motor yachts</option>
+                                                    <option value="sailing yachts">Sailing yachts</option>
+                                                    <option value="powerboat">Powerboat</option>
+                                                </select>
+                                            </div>
+                                        </h4>
+                                        <div class="select-input__name"><strong>Name</strong></div>
+                                        <div class="select-input">
+                                            <input ng-model="findName" type="text">
+                                        </div>
+                                        
+                                        <div class="check col-sm-12">
+                                            Sale<input style="margin-left: 5px;" ng-model="findCategory" type="radio" value="sale">
+                                            Rent<input style="margin-left: 5px;" ng-model="findCategory" type="radio" value="rent">
+                                        </div>
+                                        
+                                        <div class="year">
+                                            <label for="">Year</label>
+                                            <div class="select-input-year">
+                                                <input class="select-input" ng-model="findYear" type="text" placeholder="y" size="" class="border-filter col-sm-5">
+                                            </div>
+                                        </div>
+                                        <div class="lenght">
+                                            <label for="">Length</label>
+                                            <div class="select-input-lenght">
+                                                <input class="select-input" ng-model="findLength" type="text" placeholder="m" size="" class="border-filter col-sm-5">
+                                            </div>
+                                        </div>
+                                        <div class="price">
+                                            <label for="">Price</label>
+                                            <div class="select-input-price">
+                                                <input class="select-input" ng-model="findPrice" type="text" placeholder="$" size="" class="border-filter col-sm-5">
+                                            </div>
+                                        </div>
+                                        <div style="margin-top:10px;text-align:center;">
+                                            <div>
+                                                <i class="fa-sharp fa-solid fa-xmark" style="margin-right: 5px;"></i>
+                                                <input style="border-style:none;color:black;background-color: rgba(0,0,0,0);;"; class="clear-btn" type="reset" value="Reset filter" ng-click="resetForm()"></input>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>                       
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                <div class="col-lg-9">
+                    <div class="panel-sorting">
+                        <button class="filter__btn btn" ng-click="sortData('year')">New First<i ng-hide="hideIcon('year')" class="fa-solid fa-sort"></i><div ng-class="getSortClass('year')"></div></button>
+                        <button class="filter__btn btn " ng-click="sortData('price')">By Price<i ng-hide="hideIcon('price')" class="fa-solid fa-sort"></i><div ng-class="getSortClass('price')"></div></button>
+                        <button class="filter__btn btn" ng-click="sortData('length')">By Length<i ng-hide="hideIcon('length')" class="fa-solid fa-sort"></i><div ng-class="getSortClass('length')"></div></button>
+                    </div>
+                    <div>
+                    </div>
+                    
+                        <ul class="market__list">
+                            <li class="col-sm-6 col-md-4" dir-paginate="s in list | itemsPerPage:9 | orderBy:sortYachts:reverse |filter:{type:findType,name:findName,category:findCategory,year:findYear,length:findLength,price:findPrice}">
+                                    <div class="boat-item boat-item--listing boat-item__ship" itemprop="url">
+                                        <a href="./product_detail_view/{{s.id}}.html">
+                                            <div class="market-item__image">
+                                                <div>
+                                                    <img ng-src="../product/image/{{s.image}}" alt="">
+                                                </div>
+                                        </div>
+                                        </a>
+                                        
+                                        <div class="boat-item__description">
+                                            <div class="boat-item__content">
+                                                <div class="boat-item__top">
+                                                    <div style="display:flex">
+                                                        <div class="boat-item__category">Listing for {{s.category}}</div>
+                                                        <div class="boat-item__compare">
+                                                            <div style="border-style:none;" ng-model="$index" ng-click="addCompare($index)" type="button" class="btn-favorite">
+                                                                <div class="btn-tooltip">
+                                                                    <div  class="compare-btn__add add">
+                                                                        <i><div style="color:red" ng-class="getClassFavorite($index)"></div></i>
+                                                                        <i style="color:black" ng-hide="hideFavoriteIcon($index)" class="far fa-heart"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a style="text-decoration:none;color:black" href="./product_detail_view/{{s.id}}.html">
+                                                        <div class="boat-item__name">{{s.name}} ({{s.year}})</div>
+                                                    </a>
+                                                   
+                                                </div>
+                                                <div class="boat-item__options">
+                                                    <div class="boat-item__options-inner">
+                                                        <div class="boat-item__option">"{{s.length}} m"</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="boat-item__price">
+                                                <div class="boat-item__price-container">
+                                                    <div class="boat-item__price-main"><i class="fa-solid fa-dollar-sign"></i>{{s.price}}</div>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        <dir-pagination-controls></dir-pagination-controls>
+                    </div> 
+                 </div>
+            </div>
+        </div>
+    </div>
+     <!-- sign-in -->
+     <div class="signin js-sign-in">
+        <div class="signin-container js-signin-container">
+            <div class="signin-close js-signin-close">
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+            </div>
+
+            <header class="signin-header">
+                <h2 class="signin-heading"><sup>Fanstatics</sup> Yachts</h2>
+            </header>
+
+            <div class="signin-body">
+                <form onsubmit="login()" class="form" id="sign-in-form">
+                    <div class="form-group">
+                        <input type="text" name="fullname" id="signIn-user-name" rules="required" class="signin-input" placeholder="User_name">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input id="signIn-email" type="email" name="email" rules="required|email" class="signin-input" placeholder="Email">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group invalid">
+                        <input id="signIn-password" type="password" name="password" rules="required|min:6" class="signin-input" placeholder="Password">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="signin-remember">
+                        <input id="remember" type="checkbox" class="signin-checkbox">
+                        <label for="remember" class="signin-label">Remember me</label>
+                    </div>
+                    <button  class="sign-in-btn">SIGN IN</button>
+                </form>
+            </div>
+
+            <footer class="sign-footer">
+                <p class="signin-footer">Don't have an account yet? <a href="#" class="register">Register</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- sign up -->
+    <div class="sign-up js-sign-up">
+        <div class="sign-up-container js-sign-up-container">
+            <div class="signup-close js-signup-close">
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+            </div>
+            <header class="sign-up-heading">
+                <h3>REGISTRATION</h3>
+                <em class="welcome">Welcome aboard!</em>
+            </header>
+
+            <div class="sign-up-body">
+                <form onsubmit="signUpp()" class="form" id="sign-up-form">
+                <table>
+                    <tr>
+                        <td class="w30"><label for="user-name" class="sign-up-label">User name</label></td>
+                        <td>
+                            <div class="form-group">
+                                <input id="user-name" type="text" rules="required" name="fullname" class="sign-up-input">
+                                <span class="form-message"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email" class="sign-up-label">Email</label></td>
+                        <td class="form-group">
+                            <input id="email" type="email" rules="required|email" name="email" class="sign-up-input">
+                            <span class="form-message"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="password" class="sign-up-label">Password</label></td>
+                        <td class="form-group">
+                            <input id="password" type="password" rules="required|min:6" name="password" class="sign-up-input">
+                            <span class="form-message"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="confirm-password" class="sign-up-label">Confirm Password</label></td>
+                        <td class="form-group">
+                            <input id="confirm-password" type="password" rules="required|min:6" name="confirm-password" class="sign-up-input">
+                            <span class="form-message"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="sign-up-btn">SIGN UP</button></td>
+                        <td></td>
+                    </tr>
+                </table>
+                </form>
+            </div>
+
+            <footer class="sign-up-footer">
+                <p class="sign-up-desc">
+                    By clicking «Register», you acknowledge that you have read, fully agree with and accept <br>
+                    the terms of the privacy policy and consent to the processing of personal data.
+                </p>
+            </footer>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="../product/dirPagination.js"></script>
+    <script src="../product_detail/index.js"></script>
+    <script src="../product/product.js"></script>
+    <script>
+        validator ('#sign-in-form')
+        validator ('#sign-up-form')
+    </script>
+</body>
+</html>

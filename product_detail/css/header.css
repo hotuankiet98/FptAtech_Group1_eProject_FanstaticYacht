@@ -1,0 +1,11 @@
+.nav-link {
+    color:#0e1124;
+    font-weight: bold;
+}
+.nav-user{
+    display: flex;
+}
+
+.nav-header {
+    box-shadow: 0px 2px 100px -25px;
+}

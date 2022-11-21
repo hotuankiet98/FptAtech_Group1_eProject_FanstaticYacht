@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="./home/css/style.css">
+    <link rel="stylesheet" href="./product_detail/css/style.css">
+    <link rel="stylesheet" href="./home/css/responsive.css">
+    <link rel="stylesheet" href="./product_detail/css/responsive.css">
+    <link rel="stylesheet" href="about.css">
+    <title>Home</title>
+</head>
+<body>
+    <div id="home_page">
+        <div style="position:sticky;top:0;z-index: 1;" class="nav-header">
+            <nav class="navbar navbar-expand-sm bg-light navbar-light padding-20">
+                <div class="container-fluid">
+                    <a style="width:100px;height:auto" class="navbar-brand" href="#"><img style="width: 100%;" src="./home/img/logopts2.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar" style="justify-content:space-between">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./about.html">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="./view/product.html" >Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./view/contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    <span class="user-name" ></span>
+                                    <i class="fa-solid fa-user"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><button class="dropdown-item js-login">Login</button></li>
+                                    <li><button class="dropdown-item js-register">Register</button></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-regular fa-heart" style="margin-right: 5px;"></i>Favorites<span style="margin-left: 5px;padding:0 6px;background-color: black;color:white;border-radius: 20px;">1</span></a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav> 
+        </div>        
+        <div class="background_video">
+            <video autoplay muted loop id="myVideo">
+                <source src="https://media.istockphoto.com/id/848024814/vi/video/du-thuy%E1%BB%81n-sang-tr%E1%BB%8Dng-nh%C3%ACn-t%E1%BB%AB-tr%C3%AAn-kh%C3%B4ng-tr%C3%AAn-bi%E1%BB%83n.mp4?s=mp4-640x640-is&k=20&c=Ag8bOoNYwxr_fe_OvAWN1DeK0Dfl7OD02Uk5sANj0OI=" type="video/mp4">
+            </video>
+            <div style="text-align:center" class="content">
+                <h2>The humanly intelligent yacht <br> marketplace & expert platform.</h2>
+               
+                <p>An intelligent yacht ownership to help you buy, enjoy and sell the best boats — at the best possible prices.</p>
+            </div>
+        </div>
+        <div class="yachts_featured">
+            <div>
+                <h1 style="text-align:center;margin:70px 0">YACHTS <span style="color:green">FEATURED</span></h1>
+            <div class="row">
+                <div class="col-sm-9 img_featured-item-carousel">
+                    <div id="yachts_featured-carousel"class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#yachts_featured-carousel" data-bs-slide-to="0" class="active"></button>
+                          <button type="button" data-bs-target="#yachts_featured-carousel" data-bs-slide-to="1"></button>
+                          <button type="button" data-bs-target="#yachts_featured-carousel" data-bs-slide-to="2"></button>
+                        </div>
+                        
+                        <!-- The slideshow/carousel -->
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="./product/image/home-image/image01.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+                            <div class="carousel-caption">
+                              <h3></h3>
+                              <p></p>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./product/image/home-image/image111.jpg" alt="Chicago" class="d-block" style="width:100%">
+                            <div class="carousel-caption">
+                              <h3></h3>
+                              <p></p>
+                            </div> 
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./product/image/home-image/image126.jpg" alt="New York" class="d-block" style="width:100%">
+                            <div class="carousel-caption">
+                              <h3></h3>
+                              <p></p>
+                            </div>  
+                          </div>
+                        </div>
+                        
+                        <!-- Left and right controls/icons -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#yachts_featured-carousel" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#yachts_featured-carousel" data-bs-slide="next">
+                          <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-12">
+                    <div class="img_featured-item">
+                        <div class="row">
+                            <div class="col-sm-12 col-4">
+                                <img class="img_featured" src="./product/image/home-image/image22.jpeg" alt="">
+                                <div class="content_featured">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-4">
+                                <img class="img_featured" src="./product/image/home-image/image41.jpg" alt="">
+                                <div class="content_featured">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-4">
+                                <img class="img_featured" src="./product/image/home-image/image76.jpg" alt="">
+                                <div class="content_featured"> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="sale-id" ></div>
+        <div class="yachts_sale">
+            <div>
+                <h1 style="text-align:center;margin:20px 0">YACHTS FOR <span style="color:green">SALE</span></h1>
+                <div class="btn_yachts-product">
+                    <div style="background-color: #f4f7f9" class="btn-group" id="myBtnContainer">
+                        <button type="button" class="btn" onclick="filterSelection('motor')">Motor yachts</button>
+                        <button type="button" class="btn" onclick="filterSelection('sailing')">Sailing yachts</button>
+                        <button type="button" class="btn" onclick="filterSelection('power')">Powerboat</button>
+                    </div>
+                </div>
+                <div class="row yachts_sale-image">
+                    <div class="col-sm-3 sale-img sailing">
+                        <img src="./product/image/image01.jpg" alt="">
+                    </div>
+                    <div class="col-sm-3 sale-img sailing">
+                        <img src="./product/image/image41.jpg" alt="">
+                    </div>
+                    <div class="col-sm-3 sale-img sailing">
+                        <img src="./product/image/image131.jpg" alt="">
+                    </div>
+                    <div class="col-sm-3 sale-img power">
+                        <img src="./product/image/image61.jpg" alt="">
+                    </div>
+                    <div class="col-sm-3 sale-img motor">
+                        <img src="./product/image/image51.jpg" alt="">
+                    </div>
+                    <div class="col-sm-3 sale-img motor">
+                        <img src="./product/image/image71.jpg" alt="">
+                    </div>
+                    <div class="col-sm-3 sale-img motor">
+                        <img src="./product/image/image86.jpg" alt="">
+                    </div>
+                    <div class="col-sm-3 sale-img motor">
+                        <img src="./product/image/image126.jpg" alt="">
+                    </div>
+                  
+
+                     
+                   
+                </div>
+                <div class="btn-readmore">
+                    <a href="./view/product.html"><button type="button" class="btn btn-outline-dark">READ MORE</button> </a>  
+                </div>
+            </div>
+        </div>
+        <div id="rent-id" ></div>
+        <div  class="yachts_rent">
+            <div>
+                <h1 style="text-align:center;margin:20px 0">YACHTS FOR <span style="color:green">RENT</span></h1>
+                <div class="btn_yachts-product">
+                    <div style="background-color: #f4f7f9" class="btn-group" id="myRentBtnContainer">
+                        <button type="button" class="btn" onclick="filterrent('motor')">Motor yachts</button>
+                        <button type="button" class="btn" onclick="filterrent('sailing')">Sailing yachts</button>
+                        <button type="button" class="btn" onclick="filterrent('power')">Powerboat</button>
+                    </div>
+                </div>
+                <div class="row yachts_rent-image">
+                    <div class="col-sm-3 rent-img power">
+                        <img src="./product/image/image91.jpg" alt="">
+                    </div>
+                    <div class="col-sm-3 rent-img motor">
+                        <img src="./product/image/image96.jpg" alt="">
+                    </div>
+                    <div class="col-sm-3 rent-img motor">
+                        <img src="./product/image/image106.jpeg" alt="">
+                    </div>
+                    <div class="col-sm-3 rent-img sailing">
+                        <img src="./product/image/image131.jpg" alt="">
+                    </div>
+                    <div class="col-sm-3 rent-img motor">
+                        <img src="./product/image/image66.jpg" alt="">
+                    </div>
+                    <div class="col-sm-3 rent-img motor">
+                        <img src="./product/image/image36.jpg" alt="">
+                    </div>
+                    <div class="col-sm-3 rent-img motor">
+                        <img src="./product/image/image56.jpg" alt="">
+                    </div>
+                    <div class="col-sm-3 rent-img motor">
+                        <img src="./product/image/image126.jpg" alt="">
+                    </div>
+                   
+            </div>
+            <div class="btn-readmore">
+             <a href="./view/product.html"><button type="button" class="btn btn-outline-dark">READ MORE</button></a>   
+            </div>
+        </div>
+        <!-- <div class="yachts_engines">
+            <div>
+                <h1 style="text-align:center;margin:20px 0"><span style="color:orange">ENGINES</span> AND <span style="color:aqua">ACCESSORY</span></h1>
+                <div class="btn_yachts-product">
+                    <div style="background-color: #f4f7f9" class="btn-group">
+                        <button type="button" class="btn">Motor yachts</button>
+                        <button type="button" class="btn">Sailing yachts</button>
+                        <button type="button" class="btn">Powerboat</button>
+                    </div>
+                </div>
+                <div class="yachts_engines-image">
+                    <div class="row">
+                        <div class="col-4 col-sm-2 engines-img">
+                            <div>
+                                <img src="./home/img/engines-image/HTB1DN.YXjTpK1RjSZKPq6y3UpXaU.jpg_220x220.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-2 engines-img">
+                            <div>
+                                <img src="./home/img/engines-image/HTB1DN.YXjTpK1RjSZKPq6y3UpXaU.jpg_220x220.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-2 engines-img">
+                            <div>
+                                <img src="./home/img/engines-image/HTB1DN.YXjTpK1RjSZKPq6y3UpXaU.jpg_220x220.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-2 engines-img">
+                            <div>
+                                <img src="./home/img/engines-image/HTB1DN.YXjTpK1RjSZKPq6y3UpXaU.jpg_220x220.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-2 engines-img">
+                            <div>
+                                <img src="./home/img/engines-image/HTB1DN.YXjTpK1RjSZKPq6y3UpXaU.jpg_220x220.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-2 engines-img">
+                            <div>
+                                <img src="./home/img/engines-image/HTB1DN.YXjTpK1RjSZKPq6y3UpXaU.jpg_220x220.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-2 engines-img">
+                            <div>
+                                <img src="./home/img/engines-image/HTB1DN.YXjTpK1RjSZKPq6y3UpXaU.jpg_220x220.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-2 engines-img">
+                            <div>
+                                <img src="./home/img/engines-image/HTB1DN.YXjTpK1RjSZKPq6y3UpXaU.jpg_220x220.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-2 engines-img">
+                            <div>
+                                <img src="./home/img/engines-image/HTB1DN.YXjTpK1RjSZKPq6y3UpXaU.jpg_220x220.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-2 engines-img">
+                            <div>
+                                <img src="./home/img/engines-image/HTB1DN.YXjTpK1RjSZKPq6y3UpXaU.jpg_220x220.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-2 engines-img">
+                            <div>
+                                <img src="./home/img/engines-image/HTB1DN.YXjTpK1RjSZKPq6y3UpXaU.jpg_220x220.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-2 engines-img">
+                            <div>
+                                <img src="./home/img/engines-image/HTB1DN.YXjTpK1RjSZKPq6y3UpXaU.jpg_220x220.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-readmore">
+                        <button type="button" class="btn btn-outline-dark">READ MORE</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="yachts_contact">
+            <h1 style="text-align:center;margin:20px 0"><span style="color:orange">CONTACT</span></h1>
+            <div class="row">
+                <div class="col-sm-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3192813597148!2d106.66408024954471!3d10.78684006191529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2zRlBUIEFwdGVjaCBIQ00gLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1667486656863!5m2!1svi!2s" width="100%" height="100%"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <form action="" class="col-sm-6" method="POST">
+                    <div class="yachts_contact-form">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input type="text" name="name" placeholder="Name">
+                            </div>
+                            <div class="col-sm-12">
+                                <input type="text" name="phone" placeholder="Phone">
+                            </div>
+                            <div class="col-sm-12">
+                                <input id="contact-email" name="email" type="email" placeholder="Email">
+                            </div class="col-sm-12">
+                            <div class="col-sm-12">
+                                <select class="products" name="Continent">
+                                    <option value="">--Choose request--</option>
+                                    <option value="HCM">HCM</option>
+                                    <option value="HN">HN</option>
+                                    <option value="DN">DN</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12">
+                                <textarea class="input-text" name="request content" id="comment" placeholder="Request content"></textarea>
+                            </div>
+                            
+                            <div class="col-sm-12">
+                                <div class="g-recaptcha" data-sitekey="6LeHR9QiAAAAAEamfBzl1vBlP4DPe8uJbZgWZ8Kw"></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="btn-readmore">
+                        <input id="contact-btn" class="btn btn-outline-dark" type="submit" value="SEND">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="yachts_about" style="background-color:rgba(14,17,36);padding: 10px 0;color:white;">
+            <div style="padding:10px" class="row">
+                <div class="col-sm-4">
+                    <span><i class="fa-solid fa-location-dot"></i></span>
+                    <span>590, CMT8 Street, Ward 11, District 3, Ho Chi Minh City </span>
+                </div>                  
+                <div class="col-sm-4">
+                    <span><i class="fa-solid fa-mobile"></i></span>
+                    <span>+84 98 175 89 20</span> 
+                </div>
+                <div class="col-sm-4">
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <span>aptech.fpt.edu.vn</span>
+                </div> 
+            </div>
+            <div style="padding:10px">
+                Yachts and yachting news, sailing news. Global yacht fleet directory. Regatta calendar, boat shows and other yachting events schedule. Commentary. Blogs. Photo and video galleries. Use of any material from the site is allowed only when the source is quoted. Texts and images copyrights belong to their respective authors.
+            </div>
+        </div>
+    </div>
+    <!-- sign-in -->
+    <div class="signin js-sign-in">
+        <div class="signin-container js-signin-container">
+            <div class="signin-close js-signin-close">
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+            </div>
+
+            <header class="signin-header">
+                <h2 class="signin-heading"><sup>Fanstatics</sup> Yachts</h2>
+            </header>
+
+            <div class="signin-body">
+                <form onsubmit="login()" class="form" id="sign-in-form">
+                    <div class="form-group">
+                        <input type="text" name="fullname" id="signIn-user-name" rules="required" class="signin-input" placeholder="User_name">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input id="signIn-email" type="email" name="email" rules="required|email" class="signin-input" placeholder="Email">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group invalid">
+                        <input id="signIn-password" type="password" name="password" rules="required|min:6" class="signin-input" placeholder="Password">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="signin-remember">
+                        <input id="remember" type="checkbox" class="signin-checkbox">
+                        <label for="remember" class="signin-label">Remember me</label>
+                    </div>
+                    <button  class="sign-in-btn">SIGN IN</button>
+                </form>
+            </div>
+
+            <footer class="sign-footer">
+                <p class="signin-footer">Don't have an account yet? <a href="#" class="register">Register</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- sign up -->
+    <div class="sign-up js-sign-up">
+        <div class="sign-up-container js-sign-up-container">
+            <div class="signup-close js-signup-close">
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+            </div>
+            <header class="sign-up-heading">
+                <h3>REGISTRATION</h3>
+                <em class="welcome">Welcome aboard!</em>
+            </header>
+
+            <div class="sign-up-body">
+                <form onsubmit="signUpp()" class="form" id="sign-up-form">
+                <table>
+                    <tr>
+                        <td class="w30"><label for="user-name" class="sign-up-label">User name</label></td>
+                        <td>
+                            <div class="form-group">
+                                <input id="user-name" type="text" rules="required" name="fullname" class="sign-up-input">
+                                <span class="form-message"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email" class="sign-up-label">Email</label></td>
+                        <td class="form-group">
+                            <input id="email" type="email" rules="required|email" name="email" class="sign-up-input">
+                            <span class="form-message"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="password" class="sign-up-label">Password</label></td>
+                        <td class="form-group">
+                            <input id="password" type="password" rules="required|min:6" name="password" class="sign-up-input">
+                            <span class="form-message"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="confirm-password" class="sign-up-label">Confirm Password</label></td>
+                        <td class="form-group">
+                            <input id="confirm-password" type="password" rules="required|min:6" name="confirm-password" class="sign-up-input">
+                            <span class="form-message"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="sign-up-btn">SIGN UP</button></td>
+                        <td></td>
+                    </tr>
+                </table>
+                </form>
+            </div>
+
+            <footer class="sign-up-footer">
+                <p class="sign-up-desc">
+                    By clicking «Register», you acknowledge that you have read, fully agree with and accept <br>
+                    the terms of the privacy policy and consent to the processing of personal data.
+                </p>
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="./product_detail/index.js"></script>
+    <script>
+        validator ('#sign-in-form')
+        validator ('#sign-up-form')
+    </script>
+</html>

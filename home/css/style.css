@@ -1,0 +1,176 @@
+.nav-link {
+    color:#0e1124;
+    font-weight: bold;
+}
+.nav-user{
+    display: flex;
+}
+
+.nav-header {
+    box-shadow: 0px 2px 100px -25px;
+}
+.background_video{
+    position: relative;
+}
+.background_video video{
+    margin: 0;
+    padding: 0
+}
+#myVideo {
+    position: relative;
+    width:100%;
+  }
+  .content {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 100%;
+  }
+  .carousel-item{
+    height: auto;
+    width: 100%;
+}
+.carousel-inner{
+    border-radius: 13px;
+}
+.img_featured{
+    width: 100%;
+}
+.img_featured-item-carousel{
+    padding:10px 10px;
+}
+.img_featured-item{
+    padding:10px 5px;
+}
+.img_featured-item>div>div{
+    padding: 0 5px 13px;
+}
+.img_featured{
+    border-radius:15px;
+}
+.btn_yachts-product{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.btn-group{
+    width:35%;
+    border-radius:20px;
+}
+.btn{
+    border-radius:20px;
+}
+.row{
+    width: 100%;
+    margin: 0;
+}
+.col-sm-2{
+    padding: 0;
+}
+.col-sm-3{
+    padding: 0;
+}
+.col-sm-4{
+    padding: 0;
+}
+.col-sm-6{
+    padding: 0;
+}
+.col-sm-12 {
+    padding: 0;
+}
+.sale-img,.rent-img{
+    padding: 10px 10px;
+}
+
+.sale-img{
+    display: none;
+}
+.show{
+    display: block;
+}
+.rent-img{
+    display: none;
+}
+.showrent{
+    display: block;
+}
+.rent-img>img,.sale-img>img{
+    width: 100%;
+    border-radius:15px;
+}
+.engines-img{
+    padding:0 5px;
+    padding-bottom:10px;
+}
+.engines-img img{
+    width: 100%;
+}
+.engines-img>div{
+    border-radius:15px;
+    border-right: 2px solid rgba(0,0,0,.1);
+    border-bottom: 2px solid rgba(0,0,0,.1);
+}
+.btn{
+    border:0;
+}
+.yachts_featured{
+    padding:0 10px;
+}
+.img_featured-item>div{
+    position: relative;
+}
+.img_featured{
+    position: relative;
+}
+.img_featured-item .content_featured{
+    position: absolute;
+}
+.yachts_sale,.yachts_rent,.yachts_engines,.yachts_contact,.yachts_about{
+    margin-top: 70px;
+    padding:0 10px;
+}
+.container-fluid{
+    padding: 0 20px;
+}
+.btn-readmore{
+    display: flex;
+    justify-content:center;
+    margin-top: 25px;
+}
+.btn-readmore .btn{
+    border: 1px solid rgba(0,0,0,.1);
+    font-weight: bold;
+    background-color: #f4f7f9;
+    font-size: 22px;
+}
+.yachts_contact input{
+    width: 100%;
+    padding: 4px 8px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+.yachts_contact div{
+    padding:0 5px;
+    margin-bottom: 16px;
+}
+.yachts_contact select{
+    width: 100%;
+    padding: 4px 8px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+textarea{
+    width: 100%;
+    height: 100%;
+    padding: 4px 8px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+#collapsibleNavbar {
+    font-size: 20px;
+}
+#contact-btn{
+    width:10rem;
+}

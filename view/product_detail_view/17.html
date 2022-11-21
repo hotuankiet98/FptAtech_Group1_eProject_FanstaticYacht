@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../../product_detail/css/header.css">
+    <link rel="stylesheet" href="../../home/css/responsive.css">
+    <link rel="stylesheet" href="../../product_detail/css/style.css">
+    <link rel="stylesheet" href="../../product_detail/css/responsive.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('8cxTMhX5LX3zgdGRx');
+        })();
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+    <div>
+        <div style="position:sticky;top:0;z-index: 0.5;" class="nav-header">
+            <nav class="navbar navbar-expand-sm bg-light navbar-light padding-20">
+                <div class="container-fluid">
+                    <a style="width:100px;height:auto" class="navbar-brand" href="#"><img style="width: 100%;" src="../../home/img/logopts2.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar" style="justify-content:space-between">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="../product.html">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    <span class="user-name" ></span>
+                                    <i class="fa-solid fa-user"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><button class="dropdown-item js-login">Login</button></li>
+                                    <li><button class="dropdown-item js-register">Register</button></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item nav-item_favorite">
+                                <a class="nav-link" href="#"><i class="fa-regular fa-heart" style="margin-right: 5px;"></i>Favorites<span style="margin-left: 5px;padding:0 6px;background-color: black;color:white;border-radius: 20px;">{{favoriteNum}}</span></a>
+                                <div  class="favorite-table-item">
+                                    <div>
+                                        <table style="position: absolute;width: 100%;background-color: white;">
+                                            <tr ng-show="showAdd" ng-repeat="s in list|filter:{id:'17'}">
+                                                <td><img style="width: 100%" ng-src="../../product/image/{{s.image.image1}}" alt=""></td>
+                                                <td style="font-size:0.7rem;font-weight: bold">{{s.name}}</td>
+                                            </tr>
+                                            <tr>
+                                                <h6 style="position:absolute;top:35%;text-align:center;padding-left: 8px;" ng-hide="showAdd">My favorites are still empty</h6>
+                                            </tr>
+                                        </table>  
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav> 
+        </div> 
+        <div class="product" ng-repeat="s in list|filter:{id:'17'}">
+            <div class="container">
+                <div class="product-header m16px">
+                    <div class="product-infor">
+                        <h1 class="yacht-name">
+                            {{s.name}}
+                        </h1>
+                        <ul class="in4">
+                            <li><i style="font-size: 20px;" class="fa-solid fa-ruler-horizontal iconblue"></i> {{s.length}}m</li>
+                            <li><i class="fa-regular fa-clock iconblue"></i> New</li>
+                            <li><i class="fa-solid fa-anchor iconblue"></i> Ukraine</li>
+                        </ul>
+                    </div>
+        
+                    <div class="product-price">
+                        <p class="price"><i class="fa-solid fa-dollar-sign"></i>{{s.price}}</p>
+                        <ul class="time-view">
+                            <li><i class="fa-solid fa-calendar-days"></i> {{s.year}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-body m16px">
+                    <div class="body-header">
+                        <a ng-click="downloadInfo('17')" target="_self" class="ui right floated btn btn-warning" href=""><i class="fa-solid fa-download"></i>Download information</a>
+                        <div class="add-call">
+                            <span ng-click="showAddBtn('show')" ng-model="showAdd" class="add"><span ng-hide="showAdd"><i class="fa-regular fa-heart"></i>ADD </span><span ng-show="showAdd"><i class="fa-solid fa-heart"></i>ADDED </span>TO FAVORITES</span>
+                            <button ng-click="openEvent('open')" ng-model="openActive"  class="call-btn js-call-btn">REQUEST A CALL</button>
+                        </div>
+                    </div>
+                    <div class="body-imgs row">
+                        <div class="col-sm-12 col-md-12 col-xl-10"><img ng-src="../../product/image/{{s.image.image1}}" alt="#"></div>
+                        <div class="col-sm-12 col-md-12 col-xl-2">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-3 col-xl-3 padl"><img ng-src="../../product/image/{{s.image.image2}}" alt=""></div>
+                                <div class="col-sm-12 col-md-3 col-xl-3"><img ng-src="../../product/image/{{s.image.image3}}" alt=""></div>
+                                <div class="col-sm-12 col-md-3 col-xl-3"><img ng-src="../../product/image/{{s.image.image4}}" alt=""></div>
+                                <div class="col-sm-12 col-md-3 col-xl-3 padr"><img ng-src="../../product/image/{{s.image.image5}}" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="product-footer">
+                    <h2>Specifications</h2>
+                    <div class="main-content">
+                        <div class="content-item">
+                            <i class="title-item">Length</i>
+                            <div class="content-value">
+                                <b>{{s.length}}<span class="fs22px">m</span></b><span class="fs18px"></span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="table-item">
+                        <b class="table-title">Tonnage</b>
+                        <p class="table-content"><span class="bold">Deadweight, t</span> <span class="dots">..................................................................................................</span> 18.2</p>
+                        <p class="table-content"><span class="bold">Displacement, t</span> <span class="dots">..................................................................................................</span> not specified (half load)</p>
+                        <p class="table-content"><span class="bold">Fuel capacity, l</span> <span class="dots">..................................................................................................</span> 2,288</p>
+                        <p class="table-content"><span class="bold">Water tank, l</span> <span class="dots">..................................................................................................</span> 550</p>
+                    </div>
+                    <div class="table-item">
+                        <b class="table-title">Passenger capacity</b>
+                        <p class="table-content"><span class="bold">Max people</span> <span class="dots">..................................................................................................</span> 16</p>
+                        <p class="table-content"><span class="bold">Berths for guests</span> <span class="dots">..................................................................................................</span> 7</p>
+                    </div>
+                    <div class="table-item">
+                        <b class="table-title">Engines and performance</b>
+                        <p class="table-content"><span class="bold">Max Speed, уз.</span> <span class="dots">..................................................................................................</span> 33</p>
+                    </div>
+                    <div class="table-item">
+                        <b class="table-title">Classification</b>
+                        <p class="table-content"><span class="bold">CE class</span> <span class="dots">..................................................................................................</span> A – Океан</p>
+                        <p class="table-content"><span class="bold">Hull type</span> <span class="dots">..................................................................................................</span> Displacement</p>
+                        <p class="table-content"><span class="bold">Hull material</span> <span class="dots">..................................................................................................</span> Fiberglass / GRP</p>
+                        <p class="table-content"><span class="bold">Design</span> <span class="dots">..................................................................................................</span> Other</p>
+                    </div>
+                    <div class="table-item">
+                        <b class="table-title">Tonnage</b>
+                        <p class="table-content"><span class="bold">Deadweight, t</span> <span class="dots">..................................................................................................</span> Fairline</p>
+                        <p class="table-content"><span class="bold">Displacement, t</span> <span class="dots">..................................................................................................</span> Great Britain</p>
+                        <p class="table-content"><span class="bold">Fuel capacity, l</span> <span class="dots">..................................................................................................</span>{{s.name}}</p>
+                        <p class="table-content"><span class="bold">Water tank, l</span> <span class="dots">..................................................................................................</span>{{s.year}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sign-in -->
+    <div class="signin js-sign-in">
+        <div class="signin-container js-signin-container">
+            <div class="signin-close js-signin-close">
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+            </div>
+
+            <header class="signin-header">
+                <h2 class="signin-heading"><sup>Fanstatics</sup> Yachts</h2>
+            </header>
+
+            <div class="signin-body">
+                <form onsubmit="login()" class="form" id="sign-in-form">
+                    <div class="form-group">
+                        <input type="text" name="fullname" id="signIn-user-name" rules="required" class="signin-input" placeholder="User_name">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input id="signIn-email" type="email" name="email" rules="required|email" class="signin-input" placeholder="Email">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group invalid">
+                        <input id="signIn-password" type="password" name="password" rules="required|min:6" class="signin-input" placeholder="Password">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="signin-remember">
+                        <input id="remember" type="checkbox" class="signin-checkbox">
+                        <label for="remember" class="signin-label">Remember me</label>
+                    </div>
+                    <button  class="sign-in-btn">SIGN IN</button>
+                </form>
+            </div>
+
+            <footer class="sign-footer">
+                <p class="signin-footer">Don't have an account yet? <a href="#" class="register">Register</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- sign up -->
+    <div class="sign-up js-sign-up">
+        <div class="sign-up-container js-sign-up-container">
+            <div class="signup-close js-signup-close">
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+            </div>
+            <header class="sign-up-heading">
+                <h3>REGISTRATION</h3>
+                <em class="welcome">Welcome aboard!</em>
+            </header>
+
+            <div class="sign-up-body">
+                <form onsubmit="signUpp()" class="form" id="sign-up-form">
+                <table>
+                    <tr>
+                        <td class="w30"><label for="user-name" class="sign-up-label">User name</label></td>
+                        <td>
+                            <div class="form-group">
+                                <input id="user-name" type="text" rules="required" name="fullname" class="sign-up-input">
+                                <span class="form-message"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email" class="sign-up-label">Email</label></td>
+                        <td class="form-group">
+                            <input id="email" type="email" rules="required|email" name="email" class="sign-up-input">
+                            <span class="form-message"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="password" class="sign-up-label">Password</label></td>
+                        <td class="form-group">
+                            <input id="password" type="password" rules="required|min:6" name="password" class="sign-up-input">
+                            <span class="form-message"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="confirm-password" class="sign-up-label">Confirm Password</label></td>
+                        <td class="form-group">
+                            <input id="confirm-password" type="password" rules="required|min:6" name="confirm-password" class="sign-up-input">
+                            <span class="form-message"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="sign-up-btn">SIGN UP</button></td>
+                        <td></td>
+                    </tr>
+                </table>
+                </form>
+            </div>
+
+            <footer class="sign-up-footer">
+                <p class="sign-up-desc">
+                    By clicking «Register», you acknowledge that you have read, fully agree with and accept <br>
+                    the terms of the privacy policy and consent to the processing of personal data.
+                </p>
+            </footer>
+        </div>
+    </div>
+        <div ng-class="openActive" class="call-request js-call-request">
+            <div class="call-container js-call-container">
+                <div ng-click="closeEvent('open')" class="call-close js-call-close">
+                    <i class="fa-sharp fa-solid fa-xmark"></i>
+                </div>
+                <h2 class="heading">Call request</h2>
+                <form ng-submit="senEmail()">
+                <input ng-model="myName" type="text" class="call-ret-input" placeholder="Name" required>
+                <input ng-model="myEmail" type="email" class="call-ret-input" placeholder="Email" required>
+                <input ng-model="myPhone" type="phone" class="call-ret-input" placeholder="Phone" required><br>
+                <input class="call-ret-btn" type="submit" value="SEND">
+                <input class="call-ret-btn btn-reset" style="background-color: white;color:#010101; text-decoration: underline" class="call-ret-btn" type="reset" value="RESET">
+                </form>
+                <p class="call-ret-desc">By clicking "Send" you confirm that you have read and agree with our
+                                        Privacy Policy and give consent to process personal data</p>
+            </div>
+            <div ng-click="closeEvent('open')" class="backround-callrequest">
+
+            </div>
+        </div>   
+    </div> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+    <script src="../../product_detail/product_detail.js"></script>
+    <script>
+        validator ('#sign-in-form')
+        validator ('#sign-up-form')
+    </script>
+</body>
+</html>

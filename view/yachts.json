@@ -1,0 +1,32 @@
+
+{
+    "yachtsList":[
+            {"id":"01","name":"Quicksilver","type":"sailing yachts","category":"sale","image":"image01.jpg","year":"2014","length":"14","price":"1000500","favorite":"false"},
+            {"id":"02","name":"Nimbus Commuter 9","type":"powerboat","category":"sale","image":"image06.jpg","year":"2015","length":"13","price":"5200000","favorite":"false"},
+            {"id":"03","name":"Nimbus Weekender 9","type":"powerboat","category":"rent","image":"image11.jpg","year":"2018","length":"11","price":"4750000","favorite":"false"},
+            {"id":"04","name":"Falcon C 7","type":"powerboat","category":"rent","image":"image16.jpg","year":"2016","length":"19","price":"2400000","favorite":"false"},
+            {"id":"05","name":"Baglietto T52","type":"motor yachts","category":"sale","image":"image21.jpeg","year":"2020","length":"17","price":"1400000","favorite":"false"},
+            {"id":"06","name":"Fairline 50 Targa GT","type":"powerboat","category":"rent","image":"image26.jpg","year":"2008","length":"20","price":"1750000","favorite":"false"},
+            {"id":"07","name":"Majesty 100","type":"motor yachts","category":"rent","image":"image31.jpg","year":"2010","length":"18","price":"3500000","favorite":"false"},
+            {"id":"08","name":"Beneteau GRAN TURISMO ","type":"motor yachts","category":"rent","image":"image36.jpg","year":"2014","length":"15","price":"2500000","favorite":"false"},
+            {"id":"09","name":"Beneteau Swift Trawler","type":"sailing yachts","category":"sale","image":"image41.jpg","year":"2019","length":"16","price":"1550000","favorite":"false"},
+            {"id":"10","name":"Fjord 41 XL","type":"motor yachts","category":"sale","image":"image46.jpg","year":"2020","length":"10","price":"1650000","favorite":"false"},
+            {"id":"11","name":"Sundeck 400","type":"motor yachts","category":"sale","image":"image51.jpg","year":"2017","length":"14","price":"1800000","favorite":"false"},
+            {"id":"12","name":"Nimbus 405 Flybridge","type":"motor yachts","category":"rent","image":"image56.jpg","year":"2013","length":"16","price":"1600000","favorite":"false"},
+            {"id":"13","name":"Nimbus 405 Coupe","type":"powerboat","category":"sale","image":"image61.jpg","year":"2011","length":"19","price":"2000000","favorite":"false"},
+            {"id":"14","name":"Nimbus 365 Coupe","type":"powerboat","category":"rent","image":"image66.jpg","year":"2005","length":"20","price":"1700000","favorite":"false"},
+            {"id":"15","name":"Sundeck 430 Open","type":"motor yachts","category":"rent","image":"image71.jpg","year":"2008","length":"21","price":"1700000","favorite":"false"},
+            {"id":"16","name":"Nomad 95 SUV","type":"motor yachts","category":"sale","image":"image76.jpg","year":"2006","length":"14","price":"1000000","favorite":"false"},
+            {"id":"17","name":"Elling E4","type":"sailing yachts","category":"rent","image":"image81.jpeg","year":"2014","length":"12","price":"1700000","favorite":"false"},
+            {"id":"18","name":"Fairline Targa 65 GT","type":"motor yachts","category":"sale","image":"image86.jpg","year":"2022","length":"11","price":"1850000","favorite":"false"},
+            {"id":"19","name":"Fairline Targa 45 Open","type":"powerboat","category":"sale","image":"image91.jpg","year":"2017","length":"10","price":"3200000","favorite":"false"},
+            {"id":"20","name":"Ferretti 500 ","type":"motor yachts","category":"rent","image":"image96.jpg","year":"2011","length":"09","price":"4000000","favorite":"false"},
+            {"id":"21","name":"Princess X95","type":"motor yachts","category":"rent","image":"image101.jpg","year":"2022","length":"08","price":"6000000","favorite":"false"},
+            {"id":"22","name":"Reale Pacifico Explorer 32","type":"motor yachts","category":"rent","image":"image106.jpeg","year":"2020","length":"19","price":"4450000","favorite":"false"},
+            {"id":"23","name":"Mangusta Mangusta 80 ","type":"motor yachts","category":"rent","image":"image111.jpg","year":"2018","length":"15","price":"3500000","favorite":"false"},
+            {"id":"24","name":"Princess V40","type":"motor yachts","category":"sale","image":"image116.png","year":"2016","length":"16","price":"1750000","favorite":"false"},
+            {"id":"25","name":"AB Yachts 116","type":"motor yachts","category":"sale","image":"image121.jpg","year":"2017","length":"13","price":"1850000","favorite":"false"},
+            {"id":"26","name":"Azimut 62S","type":"motor yachts","category":"sale","image":"image126.jpg","year":"2021","length":"10","price":"1470000","favorite":"false"},
+            {"id":"27","name":"Silent 80","type":"sailing yachts","category":"rent","image":"image131.jpg","year":"2020","length":"08","price":"1120000","favorite":"false"}
+        ]
+}

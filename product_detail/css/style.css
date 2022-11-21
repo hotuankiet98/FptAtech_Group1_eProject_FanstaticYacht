@@ -1,0 +1,1211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.m16px {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.iconblue {
+    color: #1ea0e4;
+}
+
+.fs22px{
+    font-size: 22px;
+}
+
+.fs18px {
+    font-size: 18px;
+}
+
+
+/* Sign-up */
+
+.sign-up {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 1;
+}
+
+.sign-up-container {
+    width: 900px;
+    min-height:300px ;
+    background-color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
+    animation: registerFadeIn ease 0.4s;
+}
+
+.sign-up-heading {
+    margin-top: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.sign-up-heading h3 {
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-size: 45px;
+}
+
+.sign-up-heading .welcome {
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 18px;
+    line-height: 26px;
+    font-family: Georgia, "Open Sans", Helvetica, Arial, sans-serif;
+    color: #4c4c4c;
+    display: block;
+}
+
+.sign-up .signup-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.sign-up .signup-close:hover {
+    opacity: 1;
+}
+
+.sign-up-body {
+    margin-top: 40px;
+}
+
+.sign-up-label {
+    font-size: 15px;
+    float: right;
+    padding-right: 20px;
+}
+
+.sign-up-input {
+    width: 80%;
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.sign-up-input:hover {
+    border-color: #999;
+}
+
+.sign-up-btn {
+    width: 524px;
+    font-size: 14px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin-left: 164px;
+    border: 0px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.sign-up-btn:hover {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition:  ease-in-out 0.3s;
+}
+
+.sign-up-desc {
+    font-size: 12px;
+    text-align: center;
+    margin: 0 0 30px;
+    color: #4c4c4c;
+}
+
+table {
+    width: 100%;
+}
+
+.w30 {
+    width: 20%;
+}
+
+/* Sign-in */
+
+.signin {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 1;
+}
+
+.signin-container {
+    background-color: white;
+    width: 620px;
+    min-height: 300px;
+    position: relative;
+    animation: loginFadeIn ease 0.4s;
+}
+
+.signin .signin-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.signin .signin-close:hover {
+    opacity: 1;
+}
+
+.signin .signin-header {
+    /* font-size: 45px; */
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.signin .signin-heading {
+    font-size: 48px;
+}
+.signin-body,
+.signin-footer {
+    padding: 0 80px;
+}
+
+.signin .signin-input {
+    display: block;
+    font-size: 15px;
+    width: calc(100% - 22px);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 15px 10px;
+    margin-bottom: 16px;
+}
+
+.signin .signin-input:hover {
+    border-color: rgba(0, 0, 0, 0.8);
+}
+
+.signin .signin-label {
+    font-size: 15px;
+}
+
+/* .fg-pass {
+    float: right;
+    color: #1ea0e4;
+    text-decoration: none;
+} */
+
+.sign-in-btn {
+    font-size: 15px;
+    padding: 14px;
+    margin-top: 26px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.sign-in-btn:hover {
+    
+    color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition:  ease-in-out 0.3s;
+}
+
+.sign-footer {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+
+.register {
+    color: #999;
+    text-decoration: none;
+}
+
+.signin-footer {
+    margin-top: 12px;
+    margin-bottom: 50px;
+}
+/* Product information */
+
+/* HEADER */
+.product {
+    background-color: #ccc;
+}
+.container {
+    background-color: #f5f5f5;
+    width: 1260px;
+    min-height: 200px;
+    margin: 0 110px;
+    padding-bottom: 80px;
+}
+
+.product-header {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+.product-infor,
+.product-price {
+    display: inline-block;
+}
+
+.container .yacht-name,
+.product .price {
+    font-size: 44px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.product-infor {
+    text-align: left;
+    margin-top: 60px;
+}
+.product-price {
+    /* position: absolute; */
+    float: right;
+    text-align: right;
+    margin-top: 90px;
+}
+.in4,
+.time-view {
+    list-style: none;
+    display: inline-block;
+}
+.in4 {
+    padding-left: 0;
+}
+
+.in4 li {
+    font-size: 16px;
+    padding-right: 30px;
+    display: inline-block;
+}
+
+.time-view li {
+    font-size: 12px;
+    color: #999;
+    display: inline-block;
+}
+
+.time-view li:first-child {
+    padding-right: 20px;
+}
+
+/* BODY */
+.product-body {
+    margin-top: 18px;
+}
+
+.body-header {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.product-body .down,
+.product-body .add-call {
+    display: inline-block;
+}
+
+.product-body .down {
+    font-size: 16px;
+}
+
+.product-body .add-call {
+    font-size: 12px;
+    float: right;
+}
+
+.product-body .down {
+    text-decoration: none;
+    color: black;
+}
+
+.product-body .add {
+    color: #22ac72;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 60px;
+}
+
+.product-body .add:hover {
+    transition: linear 0.25s;
+    color: #0a8357;
+}
+.product-body .call-btn {
+    width: 300px;
+    padding: 13px 20px;
+    color: white;
+    background-color: #22ac72;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-body .call-btn:hover {
+    transition: linear 0.25s;
+    background-color: #0a8357;
+}
+
+.body-imgs .col-xl-2 {
+    width: 237px; 
+    height: 630px;
+}
+
+
+.body-imgs .col-xl-3 {
+    width: 100%; 
+    height: 150px;
+    margin-bottom: 10px;
+    border: 0px solid;
+    border-radius: 4px;
+    padding: 0;
+}
+
+.body-imgs .col-xl-10 {
+    width: 970px; 
+    height: 630px;
+    border: 0px solid;
+    border-radius: 10px;
+    padding: 0;
+    margin-right: 15px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border: 0px solid;
+    border-radius: 10px;
+}
+
+.product-footer h2 {
+    margin-top: 60px;
+}
+
+.product-footer .main-content {
+    height: 159px;
+    width: 100%;
+    margin-top: 30px;
+    background-color: #f5efe6;
+    border-radius: 4px;
+    display: flex;
+}
+
+.product-footer .content-item {
+    width: 33.3333%;
+    padding-top: 36px;
+    padding-bottom: 45px;
+    padding-left: 40px;
+    border-right: 1px solid #eee4d6;
+    
+}
+.product-footer .title-item {
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 18px;
+    line-height: 26px;
+    font-family: Georgia, "Open Sans", Helvetica, Arial, sans-serif;
+    color: #4c4c4c;
+    display: block;
+}
+
+.product-footer b {
+    font-size: 40px;
+}
+
+.table-item {
+    width: 75%;
+    margin-top: 20px;
+    padding: 22px;
+    padding-bottom: 0;
+    border: 1px solid #ececec;
+    border-radius: 4px;
+}
+
+.product-footer .table-title {
+    font-size: 18px;
+}
+
+/* Call request */
+
+.call-request {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.call-container {
+    background-color: white;
+    width: 400px;
+    min-height: 200px;
+    position: relative;
+    z-index: 1;
+    animation: callRequestFadeIn ease 0.4s;
+}
+
+.call-request .call-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.call-request .call-close:hover {
+    opacity: 1;
+}
+.call-ret-input {
+    font-size: 15px;
+    padding: 9px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.call-request .heading {
+    margin-top: 30px;
+    margin-bottom: 16px;
+
+}
+.call-ret-input:hover {
+    border-color: #999;
+}
+
+.call-ret-btn {
+    font-size: 15px;
+    padding: 9px;
+    width: 80%;
+    border: 0;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.call-ret-btn:hover {
+    background-color: #999;
+    color: black;
+    transition: ease-in-out 0.25s;
+}
+
+.call-ret-desc {
+    font-size: 12px;
+    color: #4c4c4c;
+    margin-bottom: 20px;
+}
+
+.open {
+    display: flex;
+}
+
+@keyframes loginFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes registerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes callRequestFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.backround-callrequest{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+.add{
+    -webkit-user-select: none;
+    user-select: none;
+}
+.favorite-table-item{
+    display:none;
+    content: "";
+    position: absolute;
+    width: 10rem;
+    min-height: 120px;
+    border-color: transparent rgba(255,255,255,1);
+    right: 2%;
+    border-style:0.5px solid;
+    background-color:white;
+    overflow-y: scroll;   
+    border-radius:5px;
+}
+.favorite-table-item::-webkit-scrollbar {
+    width: 0.6em;
+}
+ 
+
+.favorite-table-item::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 0.5px  slategrey;
+  border-radius: 30px;
+
+}
+
+.nav-item_favorite:hover .favorite-table-item {
+    display: block;
+}
+.btn-reset:hover{
+    font-weight:500;
+    border:0.5px solid darkgrey;
+}
+#collapsibleNavbar{
+    font-size:20px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.m16px {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.iconblue {
+    color: #1ea0e4;
+}
+
+.fs22px{
+    font-size: 22px;
+}
+
+.fs18px {
+    font-size: 18px;
+}
+
+
+
+/* Sign-up */
+.form-message {
+    display: block;
+}
+.sign-up {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 1;
+}
+
+.sign-up-container {
+    width: 900px;
+    min-height:300px ;
+    background-color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
+    animation: registerFadeIn ease 0.4s;
+}
+
+.sign-up-heading {
+    margin-top: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.sign-up-heading h3 {
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-size: 45px;
+}
+
+.sign-up-heading .welcome {
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 18px;
+    line-height: 26px;
+    font-family: Georgia, "Open Sans", Helvetica, Arial, sans-serif;
+    color: #4c4c4c;
+    display: block;
+}
+
+.sign-up .signup-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.sign-up .signup-close:hover {
+    opacity: 1;
+}
+
+.sign-up-body {
+    margin-top: 40px;
+}
+
+.sign-up-label {
+    font-size: 15px;
+    float: right;
+    padding-right: 20px;
+}
+
+.sign-up-input {
+    width: 80%;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.sign-up-input:hover {
+    border-color: #999;
+}
+
+.sign-up-btn {
+    width: 524px;
+    font-size: 14px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin-left: 164px;
+    border: 0px;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.sign-up-btn:hover {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition:  ease-in-out 0.3s;
+}
+
+.sign-up-desc {
+    font-size: 12px;
+    text-align: center;
+    margin: 0 0 30px;
+    color: #4c4c4c;
+}
+
+table {
+    width: 100%;
+}
+
+.w30 {
+    width: 20%;
+}
+
+/* Sign-in */
+
+.signin {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 1;
+}
+
+.signin-container {
+    background-color: white;
+    width: 620px;
+    min-height: 300px;
+    position: relative;
+    animation: loginFadeIn ease 0.4s;
+}
+
+.signin .signin-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.signin .signin-close:hover {
+    opacity: 1;
+}
+
+.signin .signin-header {
+    /* font-size: 45px; */
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.signin .signin-heading {
+    font-size: 48px;
+}
+.signin-body,
+.signin-footer {
+    padding: 0 80px;
+}
+
+.signin .signin-input {
+    display: block;
+    font-size: 15px;
+    width: calc(100% - 22px);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 15px 10px;
+    margin-top: 16px;
+}
+
+.signin .signin-input:hover {
+    border-color: rgba(0, 0, 0, 0.8);
+}
+
+.signin .signin-remember {
+    margin-top: 16px;
+}
+.signin .signin-label {
+    font-size: 15px;
+}
+
+/* .fg-pass {
+    float: right;
+    color: #1ea0e4;
+    text-decoration: none;
+} */
+
+.sign-in-btn {
+    font-size: 15px;
+    padding: 14px;
+    margin-top: 26px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.sign-in-btn:hover {
+    
+    color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition:  ease-in-out 0.3s;
+}
+
+.sign-footer {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+
+.register {
+    color: #999;
+    text-decoration: none;
+}
+
+.signin-footer {
+    margin-top: 12px;
+    margin-bottom: 50px;
+}
+/* Product information */
+
+/* HEADER */
+.product {
+    background-color: #ccc;
+}
+.container {
+    background-color: #f5f5f5;
+    width: 1260px;
+    min-height: 200px;
+    margin: 0 110px;
+    padding-bottom: 80px;
+}
+
+.product-header {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+.product-infor,
+.product-price {
+    display: inline-block;
+}
+
+.container .yacht-name,
+.product .price {
+    font-size: 44px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.product-infor {
+    text-align: left;
+    margin-top: 60px;
+}
+.product-price {
+    /* position: absolute; */
+    float: right;
+    text-align: right;
+    margin-top: 90px;
+}
+.in4,
+.time-view {
+    list-style: none;
+    display: inline-block;
+}
+.in4 {
+    padding-left: 0;
+}
+
+.in4 li {
+    font-size: 16px;
+    padding-right: 30px;
+    display: inline-block;
+}
+
+.time-view li {
+    font-size: 12px;
+    color: #999;
+    display: inline-block;
+}
+
+.time-view li:first-child {
+    padding-right: 20px;
+}
+
+/* BODY */
+.product-body {
+    margin-top: 18px;
+}
+
+.body-header {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.product-body .down,
+.product-body .add-call {
+    display: inline-block;
+}
+
+.product-body .down {
+    font-size: 16px;
+}
+
+.product-body .add-call {
+    font-size: 12px;
+    float: right;
+}
+
+.product-body .down {
+    text-decoration: none;
+    color: black;
+}
+
+.product-body .add {
+    color: #22ac72;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 60px;
+}
+
+.product-body .add:hover {
+    transition: linear 0.25s;
+    color: #0a8357;
+}
+.product-body .call-btn {
+    width: 300px;
+    padding: 13px 20px;
+    color: white;
+    background-color: #22ac72;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-body .call-btn:hover {
+    transition: linear 0.25s;
+    background-color: #0a8357;
+}
+
+.body-imgs .col-xl-2 {
+    width: 237px; 
+    height: 630px;
+}
+
+
+.body-imgs .col-xl-3 {
+    width: 100%; 
+    height: 150px;
+    margin-bottom: 10px;
+    border: 0px solid;
+    border-radius: 4px;
+    padding: 0;
+}
+
+.body-imgs .col-xl-10 {
+    width: 970px; 
+    height: 630px;
+    border: 0px solid;
+    border-radius: 10px;
+    padding: 0;
+    margin-right: 15px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border: 0px solid;
+    border-radius: 10px;
+}
+
+.product-footer h2 {
+    margin-top: 60px;
+}
+
+.product-footer .main-content {
+    height: 159px;
+    width: 75%;
+    margin-top: 30px;
+    background-color: #f5efe6;
+    border-radius: 4px;
+    display: flex;
+}
+
+.product-footer .content-item {
+    width: 33.3333%;
+    padding-top: 36px;
+    padding-bottom: 45px;
+    padding-left: 40px;
+    border-right: 1px solid #eee4d6;
+    
+}
+.product-footer .title-item {
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 18px;
+    line-height: 26px;
+    font-family: Georgia, "Open Sans", Helvetica, Arial, sans-serif;
+    color: #4c4c4c;
+    display: block;
+}
+
+.product-footer b {
+    font-size: 40px;
+}
+
+.table-item {
+    width: 75%;
+    margin-top: 20px;
+    padding: 22px;
+    padding-bottom: 0;
+    border: 1px solid #ececec;
+    border-radius: 4px;
+}
+
+.product-footer .table-title {
+    font-size: 18px;
+}
+
+/* Call request */
+
+.call-request {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.call-container {
+    background-color: white;
+    width: 400px;
+    min-height: 200px;
+    position: relative;
+    z-index: 1;
+    animation: callRequestFadeIn ease 0.4s;
+}
+
+.call-request .call-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.call-request .call-close:hover {
+    opacity: 1;
+}
+.call-ret-input {
+    font-size: 15px;
+    padding: 9px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.call-request .heading {
+    margin-top: 30px;
+    margin-bottom: 16px;
+
+}
+.call-ret-input:hover {
+    border-color: #999;
+}
+
+.call-ret-btn {
+    font-size: 15px;
+    padding: 9px;
+    width: 80%;
+    border: 0;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.call-ret-btn:hover {
+    background-color: #999;
+    color: black;
+    transition: ease-in-out 0.25s;
+}
+
+.call-ret-desc {
+    font-size: 12px;
+    color: #4c4c4c;
+    margin-bottom: 20px;
+}
+
+.open {
+    display: flex;
+}
+
+.invalid {
+    color: red;
+}
+
+@keyframes loginFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes registerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes callRequestFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

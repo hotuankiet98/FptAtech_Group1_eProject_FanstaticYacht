@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="./home/css/style.css">
+    <link rel="stylesheet" href="./product_detail/css/style.css">
+    <link rel="stylesheet" href="./home/css/responsive.css">
+    <link rel="stylesheet" href="./product_detail/css/responsive.css">
+    <link rel="stylesheet" href="./about.css">
+    <title>About</title>
+</head>
+<body>
+    <div id="home_page">
+        <div style="position:sticky;top:0;z-index: 1;" class="nav-header" >
+            <nav class="navbar navbar-expand-sm bg-light navbar-light padding-20">
+                <div class="container-fluid">
+                    <a style="width:100px;height:auto" class="navbar-brand" href="./index.html"><img style="width: 100%;" src="./home/img/logopts2.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar" style="justify-content:space-between">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./view/product.html">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./view/contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><button class="dropdown-item js-login">Login</button></li>
+                                    <li><button class="dropdown-item js-register">Register</button></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-regular fa-heart" style="margin-right: 5px;"></i>Favorites<span style="margin-left: 5px;padding:0 6px;background-color: black;color:white;border-radius: 20px;">0</span></a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav> 
+        </div>
+        <div class="backgroud-about" >
+            <div class="container-about">
+                <div class="row">
+                    <div class="col">
+                        <div class="article-content">
+                            <h2 class="heading-30">About us</h2>
+                            <p>itBoat is a global database of all existing models of sailing and motor yachts and a web service which helps search, choose, compare and buy boats. itBoat partners with experienced and trusted yacht sellers and connects buyers with sellers through Fantastic Yacht Catalog to ensure the most seamless buying experience.</p>
+                            <h3 class="heading-22">Passion for yacht charter refashion</h3>
+                            <p>
+                                Being the industry leader comes with great responsibility. We don’t want to be just another vacation provider or yacht charter. We’re here to make a difference by sharing our passion for sailing, adventures, and experiences that will last you a lifetime. Our greatest desire is to create the best unforgettable sailing experience tailored to your needs. We’re already curious to see where your sailing route leads.
+                            </p>
+                            <p>Our passion is contagious because of great experience in the yacht charter industry that lasts for ages. You’ll find our carefully mapped sailing routes and local knowledge exquisite, no matter which destination you decide to visit!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="yachts_about" style="background-color:rgba(14,17,36);padding: 10px 0;color:white;">
+                    <div style="padding:10px" class="row">
+                        <div class="col-sm-4">
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <span>590, CMT8 Street, Ward 11, District 3, Ho Chi Minh City </span>
+                        </div>                  
+                        <div class="col-sm-4">
+                            <span><i class="fa-solid fa-mobile"></i></span>
+                            <span>+84 98 175 89 20</span> 
+                        </div>
+                        <div class="col-sm-4">
+                            <span><i class="fa-solid fa-envelope"></i></span>
+                            <span>aptech.fpt.edu.vn</span>
+                        </div> 
+                    </div>
+                    <div style="padding:10px">
+                        Yachts and yachting news, sailing news. Global yacht fleet directory. Regatta calendar, boat shows and other yachting events schedule. Commentary. Blogs. Photo and video galleries. Use of any material from the site is allowed only when the source is quoted. Texts and images copyrights belong to their respective authors.
+                    </div>
+                </div>
+            </footer>
+
+            
+        </div>
+       
+    </div>
+    <!-- sign-in -->
+    <div class="signin js-sign-in">
+        <div class="signin-container js-signin-container">
+            <div class="signin-close js-signin-close">
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+            </div>
+
+            <header class="signin-header">
+                <h2 class="signin-heading"><sup>Fanstatics</sup> Yachts</h2>
+            </header>
+
+            <div class="signin-body">
+                <form action="">
+                <input type="email" class="signin-input" placeholder="Email" required>
+                <input type="password" class="signin-input" placeholder="Password" required>
+                <input id="remember" type="checkbox" class="signin-checkbox">
+                <label for="remember" class="signin-label">Remember me</label>
+                <button class="sign-in-btn">SIGN IN</button>
+                </form>
+            </div>
+
+            <footer class="sign-footer">
+                <p class="signin-footer">Don't have an account yet? <a href="#" class="register">Register</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- sign up -->
+    <div class="sign-up js-sign-up">
+        <div class="sign-up-container js-sign-up-container">
+            <div class="signup-close js-signup-close">
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+            </div>
+            <header class="sign-up-heading">
+                <h3>REGISTRATION</h3>
+                <em class="welcome">Welcome aboard!</em>
+            </header>
+
+            <div class="sign-up-body">
+                <form action="">
+                <table>
+                    <tr>
+                        <td class="w30"><label for="user-name" class="sign-up-label">User name</label></td>
+                        <td><input id="user-name" type="text" class="sign-up-input" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email" class="sign-up-label">Email</label></td>
+                        <td><input id="email" type="email" class="sign-up-input" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password" class="sign-up-label">Password</label></td>
+                        <td><input id="password" type="password" class="sign-up-input" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="confirm-password" class="sign-up-label">Confirm Password</label></td>
+                        <td><input id="confirm-password" type="password" class="sign-up-input" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="sign-up-btn">SIGN UP</button></td>
+                        <td></td>
+                    </tr>
+                </table>
+                </form>
+            </div>
+
+            <footer class="sign-up-footer">
+                <p class="sign-up-desc">
+                    By clicking «Register», you acknowledge that you have read, fully agree with and accept <br>
+                    the terms of the privacy policy and consent to the processing of personal data.
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="./product_detail/index.js"></script>
+</html>

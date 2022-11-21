@@ -1,0 +1,29 @@
+.article-content{
+    padding: 0 80px;
+    font: 400 18px/26px Georgia,Open\ Sans,Helvetica,Arial,sans-serif;
+    letter-spacing: -.1px;
+}
+
+.heading-30{
+    font-size: 30px;
+    line-height: 36px;
+    
+}
+.heading-22{
+    font-size: 22px;
+    line-height: 26px;
+}
+[class^=heading]{
+    display: block;
+    font-weight: 700;
+    margin: 0 0 26px;
+}
+.article-content{
+    padding: 62px 20px;
+    width: 95%;
+    background-color: #fff;
+    
+}
+.container-about{
+    padding-left: 30px;
+}
