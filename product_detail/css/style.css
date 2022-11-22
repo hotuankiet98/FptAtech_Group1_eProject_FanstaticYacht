@@ -257,6 +257,12 @@ table {
     margin-top: 12px;
     margin-bottom: 50px;
 }
+.close {
+    display: none;
+}
+.js-dropdown-logout{
+    display:none;
+}
 /* Product information */
 
 /* HEADER */

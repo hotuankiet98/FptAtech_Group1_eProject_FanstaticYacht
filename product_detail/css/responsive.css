@@ -1,12 +1,8 @@
 
 /* Tablet */
-@media (min-width: 740px) and (max-width: 1023px) {
+@media (min-width: 740px){
     /* Product */
-    .container {
-        max-width: 100%;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
+    
 
     .container .yacht-name,
     .product .price {
@@ -225,5 +221,11 @@
 
     .call-container {
         max-width: calc(100% - 24px);
+    }
+    
+}
+@media only screen and (max-width: 576px) {
+    .nav-item_favorite:hover .favorite-table-item{
+        display: none;
     }
 }

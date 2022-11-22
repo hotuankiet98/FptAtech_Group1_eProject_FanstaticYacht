@@ -1,4 +1,3 @@
-// Đóng mở các form
 const loginBtn = document.querySelector('.js-login')
 const signIn = document.querySelector('.js-sign-in')
 const signInContainer = document.querySelector('.js-signin-container')
@@ -9,6 +8,9 @@ const signUp = document.querySelector('.js-sign-up')
 const signUpContainer = document.querySelector('.js-sign-up-container')
 const signUpClose = document.querySelector('.js-signup-close')
 
+function send(){
+    alert("You send contact successfully!");
+}
 
 //hàm mở các form
 function showSignIn() {
@@ -62,6 +64,9 @@ btnSignup.addEventListener("click", (e) => {
   } else {
     localStorage.setItem(usernameIn.value, json);
     alert("Sign Up Success");
+    setTimeout(hideSignUp,500)
+    setTimeout(showSignIn,500)
+    
   }
 });
 
@@ -87,12 +92,38 @@ btnLogin.addEventListener("click", (e) => {
     alert("Logged in successfully");
     document.querySelector(".user-name").innerHTML = username.value;
     setTimeout(hideSignIn,500)
+    showUser ();
+    hideUserLogin ();
   } else {
     alert("Login failed");
   }
 });
 
+//-----------------------------------------
+const userLogout = document.querySelector('.js-dropdown-logout')
+const userLogin = document.querySelector('.js-dropdown-login')
+const logoutBtn = document.querySelector('.js-logout')
 
+logoutBtn.addEventListener('click', function() {
+    hideUser();
+    showUserLogin();
+    document.querySelector(".user-name").innerHTML = '';
+})
+
+function hideUser () {
+    userLogout.classList.remove('open')
+}
+function showUser () {
+    userLogout.classList.add('open')
+}
+
+function hideUserLogin () {
+    userLogin.classList.add('close')
+}
+
+function showUserLogin () {
+    userLogin.classList.remove('close')
+}
 
 function validator(formSelector) {
     function getParent(element, selector) {
@@ -198,6 +229,7 @@ function validator(formSelector) {
             }
         }
     }
+   
 
     
 }
@@ -292,3 +324,4 @@ filterSelection("all")
                 this.className += " active";
             });
         }
+        

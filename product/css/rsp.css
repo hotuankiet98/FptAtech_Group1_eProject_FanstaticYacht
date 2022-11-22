@@ -15,4 +15,7 @@
     .market-item__image img{
         height: auto
     }
+    .nav-item_favorite:hover .favorite-table-item{
+        display: none;
+    }
 }

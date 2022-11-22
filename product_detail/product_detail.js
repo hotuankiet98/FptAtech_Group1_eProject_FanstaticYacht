@@ -15,17 +15,31 @@ var callRequestContainer = document.querySelector('.js-call-container')
 
 var callRequestClose = document.querySelector('.js-call-close')
 
-var txt
+var userLogout = document.querySelector('.js-dropdown-logout')
+var userLogin = document.querySelector('.js-dropdown-login')
+var logoutBtn = document.querySelector('.js-logout')
 
+
+function hideUser () {
+    userLogout.classList.remove('open')
+}
+function showUser () {
+    userLogout.classList.add('open')
+}
+
+function hideUserLogin () {
+    userLogin.classList.add('close')
+}
+
+function showUserLogin () {
+    userLogin.classList.remove('close')
+}
 
 function showSignIn() {
     signIn.classList.add('open');
 }
 function showSignUp() {
     signUp.classList.add('open');
-}
-function showCallRequest() {
-    callRequest.classList.add('open');
 }
 
 
@@ -35,9 +49,7 @@ function hideSignIn() {
 function hideSignUp() {
     signUp.classList.remove('open');
 }
-function hideCallRequest() {
-    callRequest.classList.remove('open');
-}
+
 
 var mainApp={
   
@@ -57,6 +69,11 @@ handleEvent(){
         event.stopPropagation()
     })
 
+    logoutBtn.addEventListener('click', function() {
+        hideUser();
+        showUserLogin();
+        document.querySelector(".user-name").innerHTML = '';
+    })
     
   
     
