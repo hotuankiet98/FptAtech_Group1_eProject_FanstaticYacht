@@ -69,11 +69,7 @@ handleEvent(){
         event.stopPropagation()
     })
 
-    logoutBtn.addEventListener('click', function() {
-        hideUser();
-        showUserLogin();
-        document.querySelector(".user-name").innerHTML = '';
-    })
+   
     
   
     
